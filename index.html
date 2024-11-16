@@ -13,13 +13,16 @@
             background-color: #f8f9fa;
             color: #333;
             background-image: url('https://images.app.goo.gl/zEPgASaaipyJsUxS7');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-size: cover;  /* Ensures the image covers the whole page */
+            background-position: center;  /* Centers the image */
+            background-repeat: no-repeat;  /* Prevents the image from repeating */
         }
 
         header {
             position: relative;
+            background-image: url(''); /* Background Image */
+            background-size: cover;
+            background-position: center;
             height: 100vh;
             text-align: center;
             display: flex;
@@ -28,26 +31,6 @@
             align-items: center;
             color: white;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        }
-
-        .top-icons {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .top-icons a {
-            color: white;
-            font-size: 1.5em;
-            text-decoration: none;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .top-icons a:hover {
-            transform: scale(1.2);
-            color: #ff758c;
         }
 
         header h1 {
@@ -103,12 +86,44 @@
             justify-content: center;
         }
 
-        .category img {
+        .category, .subcategory {
+            text-align: center;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            padding: 1.5em;
+            border-radius: 15px;
+            width: 200px;
+            cursor: pointer;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category:hover, .subcategory:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .category img, .subcategory img {
             width: 80px;
             height: 80px;
             margin-bottom: 0.5em;
             border-radius: 50%;
             border: 3px solid white;
+        }
+
+        .subcategory {
+            background: white;
+            color: #333;
+            font-weight: bold;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin: 0.5em;
+            padding: 0.8em 1.2em;
+        }
+
+        .subcategory:hover {
+            background: #fff1e6;
+            transform: translateY(-5px);
         }
 
         footer {
@@ -119,15 +134,47 @@
             font-size: 1em;
         }
 
+        footer .social-icons {
+            margin-top: 1em;
+        }
+
         footer .social-icons a {
             margin: 0 15px;
-            font-size: 2em;
+            font-size: 2em;  /* Adjust size as needed */
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         footer .social-icons a:hover {
+            color: #ff758c;  /* Change color on hover */
+        }
+         .return-policy {
+            margin-top: 2em;
+            background: #fff;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333;
+            line-height: 1.6em;
+            font-size: 1em;
+        }
+
+        .return-policy h2 {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .return-policy p {
+            margin: 0.5em 0;
+        }
+
+        .return-policy strong {
             color: #ff758c;
         }
     </style>
@@ -135,17 +182,78 @@
 <body>
     <!-- Hero Section -->
     <header>
-        <div class="top-icons">
-            <a href="#help" title="Help"><i class="fas fa-question-circle"></i></a>
-            <a href="#return-policy" title="Return Policy"><i class="fas fa-undo-alt"></i></a>
-            <a href="#privacy-policy" title="Privacy Policy"><i class="fas fa-user-shield"></i></a>
-        </div>
         <h1>OPULENT OUTLET</h1>
         <p>Discover vibrant fashion collections designed to make a statement. Shop now and express your style!</p>
         <button>Explore Now</button>
     </header>
 
-    <!-- Sections ... -->
+    <!-- Mobile Accessories Section -->
+    <section>
+        <h2>Mobile Accessories</h2>
+        <div class="categories">
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Phone Cases">
+                <span>Phone Cases</span>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Chargers">
+                <span>Chargers</span>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Headphones">
+                <span>Headphones</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women Section -->
+    <section>
+       <h2>Women</h2>
+        <div class="categories">
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Necklaces">
+                <span>Necklaces</span>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Earings">
+                <span>Earings</span>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Sarees">
+                <span>Sarees</span>
+        </div>
+        <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Bracelets">
+                <span>Bracelets</span>
+        </div>
+        <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Kurtis">
+                <span>Kurtis</span>
+        </div>
+        <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Cosmetics">
+                <span>Cosmetics</span>
+        </div>
+    </section>
+
+    <!-- Men Section -->
+    <section>
+        <h2>Men</h2>
+        <div class="categories">
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Shirts">
+                <span>Shirts</span>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="T-Shirts">
+                <span>T-Shirts</span>
+            </div>
+            <div class="category">
+                <img src="https://via.placeholder.com/80" alt="Trousers">
+                <span>Trousers</span>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -156,5 +264,12 @@
             <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
+     <!-- Return Policy -->
+    <div class="return-policy">
+        <h2>Return Policy</h2>
+        <p>Returns are only initiated if the product received is <strong>damaged</strong> or if the wrong product is delivered compared to what was originally ordered.</p>
+        <p>To initiate a return, we require a proper <strong>unboxing video</strong> of the product. If the customer fails to provide a valid video along with our bill tag, the return request will be canceled.</p>
+        <p>To initiate any return, please contact us at: <a href="mailto:prottus2004@gmail.com">prottus2004@gmail.com</a></p>
+    </div>
 </body>
-</html>
+</html>  
