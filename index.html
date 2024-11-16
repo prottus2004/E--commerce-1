@@ -149,6 +149,49 @@
         footer .social-icons a:hover {
             color: #ff758c;  /* Change color on hover */
         }
+
+        /* Add styles for forms */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+
+        .form-container input, .form-container button {
+            width: 100%;
+            padding: 1em;
+            margin: 0.5em 0;
+            font-size: 1em;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .form-container button {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .form-container button:hover {
+            transform: scale(1.05);
+        }
+
+        .form-container a {
+            text-align: center;
+            display: block;
+            color: #ff758c;
+            text-decoration: none;
+            margin-top: 1em;
+        }
     </style>
 </head>
 <body>
@@ -159,72 +202,38 @@
         <button>Explore Now</button>
     </header>
 
-    <!-- Mobile Accessories Section -->
-    <section>
-        <h2>Mobile Accessories</h2>
-        <div class="categories">
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Phone Cases">
-                <span>Phone Cases</span>
-            </div>
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Chargers">
-                <span>Chargers</span>
-            </div>
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Headphones">
-                <span>Headphones</span>
-            </div>
-        </div>
+    <!-- Login Form -->
+    <section class="form-container">
+        <h2>Login</h2>
+        <form action="#">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <a href="#">Forgot Password?</a>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
     </section>
 
-    <!-- Women Section -->
-    <section>
-       <h2>Women</h2>
-        <div class="categories">
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Necklaces">
-                <span>Necklaces</span>
-            </div>
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Earings">
-                <span>Earings</span>
-            </div>
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Sarees">
-                <span>Sarees</span>
-        </div>
-        <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Bracelets">
-                <span>Bracelets</span>
-        </div>
-        <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Kurtis">
-                <span>Kurtis</span>
-        </div>
-        <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Cosmetics">
-                <span>Cosmetics</span>
-        </div>
+    <!-- Sign Up Form -->
+    <section class="form-container">
+        <h2>Sign Up</h2>
+        <form action="#">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
     </section>
 
-    <!-- Men Section -->
+    <!-- Privacy Policy Link -->
     <section>
-        <h2>Men</h2>
-        <div class="categories">
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Shirts">
-                <span>Shirts</span>
-            </div>
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="T-Shirts">
-                <span>T-Shirts</span>
-            </div>
-            <div class="category">
-                <img src="https://via.placeholder.com/80" alt="Trousers">
-                <span>Trousers</span>
-            </div>
-        </div>
+        <h2><a href="privacy-policy.html" style="color: #ff758c;">Privacy Policy</a></h2>
+    </section>
+
+    <!-- Return Policy Link -->
+    <section>
+        <h2><a href="return-policy.html" style="color: #ff758c;">Return Policy</a></h2>
     </section>
 
     <!-- Footer -->
