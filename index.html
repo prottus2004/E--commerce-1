@@ -12,10 +12,17 @@
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
             color: #333;
-            background-image: url('');
-            background-size: cover;  /* Ensures the image covers the whole page */
-            background-position: center;  /* Centers the image */
-            background-repeat: no-repeat;  /* Prevents the image from repeating */
+            <script>
+    function toggleProductList(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section.style.display === "none" || section.style.display === "") {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    }
+</script>
+
         }
 
         header {
@@ -188,29 +195,43 @@
     </header>
 
     <!-- Mobile Accessories Section -->
-    <section>
-        <h2>Mobile Accessories</h2>
-        <div class="categories">
-          <a href="https://example.com/Phone Cases" target="_blank">
-            <div class="category">
-                <img src="mobile cases.webp" alt="Phone Cases">
-                </a>
-                <span>Phone Cases</span>
+   <section>
+    <h2>Mobile Accessories</h2>
+    <div class="categories">
+        <div class="category" onclick="toggleProductList('phone-cases-products')">
+            <img src="mobile cases.webp" alt="Phone Cases">
+            <span>Phone Cases</span>
+        </div>
+    </div>
+    <!-- Phone Cases Product Listings -->
+    <div id="phone-cases-products" class="product-listing" style="display: none;">
+        <h3>Phone Cases</h3>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="product-case1.webp" alt="Floral Phone Case">
+                <h4>Floral Phone Case</h4>
+                <p>₹299</p>
+                <button onclick="window.location.href='https://example.com/product-case1'">Buy Now</button>
             </div>
-            <div class="category">
-              <a href="https://example.com/Chargers" target="_blank">
-                <img src="chargers.jpeg" alt="Chargers">
-                </a>
-                <span>Chargers</span>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="product-case2.webp" alt="Minimalist Phone Case">
+                <h4>Minimalist Phone Case</h4>
+                <p>₹349</p>
+                <button onclick="window.location.href='https://example.com/product-case2'">Buy Now</button>
             </div>
-            <div class="category">
-              <a href="https://example.com/Headphones" target="_blank">
-                <img src="headfones.jpeg" alt="Headphones">
-                </a>
-                <span>Headphones</span>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="product-case3.webp" alt="Abstract Art Phone Case">
+                <h4>Abstract Art Phone Case</h4>
+                <p>₹399</p>
+                <button onclick="window.location.href='https://example.com/product-case3'">Buy Now</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Women Section -->
     <section>
