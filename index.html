@@ -165,65 +165,105 @@
 </head>
 <body>
     <!-- Hero Section -->
-   <!-- Updated Mobile Accessories Section -->
-<section id="mobile-accessories" data-section="mobile-accessories">
-    <h2>Mobile Accessories</h2>
-    <div class="categories"></div>
-</section>
+    <header>
+        <h1>SHOP WITH US !</h1>
+        <p>Discover vibrant fashion collections designed to make a statement. Shop now and express your style!</p>
+        <button id="explore-button">Explore Now</button>
+    </header>
 
-<!-- Updated Women Section -->
-<section id="women" data-section="women">
-    <h2>Women</h2>
-    <div class="categories"></div>
-</section>
+    <!-- Mobile Accessories Section -->
+    <section id="mobile-accessories">
+        <h2>Mobile Accessories</h2>
+        <div class="categories">
+            <div class="category">
+                <a href="https://example.com/PhoneCases" target="_blank">
+                    <img src="mobile cases.webp" alt="Phone Cases">
+                </a>
+                <span>Phone Cases</span>
+            </div>
+            <div class="category">
+                <a href="https://example.com/Chargers" target="_blank">
+                    <img src="chargers.jpeg" alt="Chargers">
+                </a>
+                <span>Chargers</span>
+            </div>
+            <div class="category">
+                <a href="https://example.com/Headphones" target="_blank">
+                    <img src="headfones.jpeg" alt="Headphones">
+                </a>
+                <span>Headphones</span>
+            </div>
+        </div>
+    </section>
+    
 
-<!-- Updated Men Section -->
-<section id="men" data-section="men">
-    <h2>Men</h2>
-    <div class="categories"></div>
-</section>
- Define product data
-const products = {
-    "mobile-accessories": [
-        { name: "Phone Cases", img: "mobile cases.webp", link: "https://example.com/PhoneCases" },
-        { name: "Chargers", img: "chargers.jpeg", link: "https://example.com/Chargers" },
-        { name: "Headphones", img: "headfones.jpeg", link: "https://example.com/Headphones" },
-    ],
-    women: [
-        { name: "Necklaces", img: "necklace.webp", link: "https://example.com/Necklaces" },
-        { name: "Earrings", img: "earings.webp", link: "https://example.com/Earings" },
-        { name: "Sarees", img: "saress.avif", link: "https://example.com/Sarees" },
-        { name: "Bracelets", img: "bracelets.webp", link: "https://example.com/Bracelets" },
-        { name: "Kurtis", img: "White-Pink-Palazoo-300x400.jpg", link: "https://example.com/kurtis" },
-        { name: "Cosmetics", img: "cosmetics.jpg", link: "https://example.com/Cosmetics" },
-    ],
-    men: [
-        { name: "Shirts", img: "men shirts.jpeg", link: "https://example.com/Shirts" },
-        { name: "T-Shirts", img: "t shits.webp", link: "https://example.com/T-Shirts" },
-        { name: "Trousers", img: "trousers.jpeg", link: "https://example.com/Trousers" },
-    ],
-};
+    <!-- Women Section -->
+    <section>
+       <h2>Women</h2>
+        <div class="categories">
+            <div class="category">
+              <a href="https://example.com/Necklaces" target="_blank">
+                <img src="necklace.webp" alt="Necklaces">
+                </a>
+                <span>Necklaces</span>
+            </div>
+            <div class="category">
+              <a href="https://example.com/Earings" target="_blank">
+                <img src="earings.webp" alt="Earings">
+                </a>
+                <span>Earings</span>
+            </div>
+            <div class="category">
+              <a href="https://example.com/Sarees" target="_blank">
+                <img src="saress.avif" alt="Sarees">
+                </a>
+                <span>Sarees</span>
+        </div>
+        <div class="category">
+          <a href="https://example.com/Bracelets" target="_blank">
+                <img src="bracelets.webp" alt="Bracelets">
+                </a>
+                <span>Bracelets</span>
+        </div>
+        <div class="category">
+        <a href="https://example.com/kurtis" target="_blank">
+        <img src="White-Pink-Palazoo-300x400.jpg" alt="Kurtis">
+    </a>
+    <span>Kurtis</span>
+</div>
+        <div class="category">
+          <a href="https://example.com/Cosmetics" target="_blank">
+                <img src="cosmetics.jpg" alt="Cosmetics">
+                </a>
+                <span>Cosmetics</span>
+        </div>
+    </section>
 
+    <!-- Men Section -->
+    <section>
+        <h2>Men</h2>
+        <div class="categories">
+            <div class="category">
+              <a href="https://example.com/Shirts" target="_blank">
+                <img src="men shirts.jpeg" alt="Shirts">
+                </a>
+                <span>Shirts</span>
+            </div>
+            <div class="category">
+              <a href="https://example.com/T-Shirts" target="_blank">
+                <img src="t shits.webp" alt="T-Shirts">
+                </a>
+                <span>T-Shirts</span>
+            </div>
+            <div class="category">
+              <a href="https://example.com/ Trousers " target="_blank">
+                <img src="trousers.jpeg" alt="Trousers">
+                </a>
+                <span> Trousers</span>
+            </div>
+        </div>
+    </section>
 
-function populateSection(sectionId, productsArray) {
-    const section = document.querySelector(`#${sectionId} .categories`);
-    productsArray.forEach(product => {
-        const category = document.createElement('div');
-        category.classList.add('category');
-        category.innerHTML = `
-            <a href="${product.link}" target="_blank">
-                <img src="${product.img}" alt="${product.name}">
-            </a>
-            <span>${product.name}</span>
-        `;
-        section.appendChild(category);
-    });
-}
-
-// Populate all sections
-Object.keys(products).forEach(sectionId => {
-    populateSection(sectionId, products[sectionId]);
-});
 
     <!-- Footer -->
     <footer>
