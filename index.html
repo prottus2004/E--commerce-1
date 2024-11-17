@@ -13,9 +13,9 @@
             background-color: #f8f9fa;
             color: #333;
             background-image: url('');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-size: cover;  /* Ensures the image covers the whole page */
+            background-position: center;  /* Centers the image */
+            background-repeat: no-repeat;  /* Prevents the image from repeating */
         }
 
         header {
@@ -86,7 +86,7 @@
             justify-content: center;
         }
 
-        .category {
+        .category, .subcategory {
             text-align: center;
             background: linear-gradient(135deg, #89f7fe, #66a6ff);
             padding: 1.5em;
@@ -97,17 +97,33 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .category:hover {
+        .category:hover, .subcategory:hover {
             transform: translateY(-10px);
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .category img {
+        .category img, .subcategory img {
             width: 80px;
             height: 80px;
             margin-bottom: 0.5em;
             border-radius: 50%;
             border: 3px solid white;
+        }
+
+        .subcategory {
+            background: white;
+            color: #333;
+            font-weight: bold;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin: 0.5em;
+            padding: 0.8em 1.2em;
+        }
+
+        .subcategory:hover {
+            background: #fff1e6;
+            transform: translateY(-5px);
         }
 
         footer {
@@ -124,15 +140,29 @@
 
         footer .social-icons a {
             margin: 0 15px;
-            font-size: 2em;
+            font-size: 2em;  /* Adjust size as needed */
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         footer .social-icons a:hover {
-            color: #ff758c;
+            color: #ff758c;  /* Change color on hover */
         }
+         .return-policy {
+            margin-top: 2em;
+            background: #fff;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333;
+            line-height: 1.6em;
+            font-size: 1em;
+        }
+
         .return-policy h2 {
             text-align: center;
             margin-bottom: 1em;
@@ -147,7 +177,6 @@
         .return-policy strong {
             color: #ff758c;
         }
-
     </style>
 </head>
 <body>
@@ -155,34 +184,33 @@
     <header>
         <h1>SHOP WITH US !</h1>
         <p>Discover vibrant fashion collections designed to make a statement. Shop now and express your style!</p>
-        <button id="explore-button">Explore Now</button>
+        <button>Explore Now</button>
     </header>
 
     <!-- Mobile Accessories Section -->
-    <section id="mobile-accessories">
+    <section>
         <h2>Mobile Accessories</h2>
         <div class="categories">
+          <a href="https://example.com/Phone Cases" target="_blank">
             <div class="category">
-                <a href="https://example.com/PhoneCases" target="_blank">
-                    <img src="mobile cases.webp" alt="Phone Cases">
+                <img src="mobile cases.webp" alt="Phone Cases">
                 </a>
                 <span>Phone Cases</span>
             </div>
             <div class="category">
-                <a href="https://example.com/Chargers" target="_blank">
-                    <img src="chargers.jpeg" alt="Chargers">
+              <a href="https://example.com/Chargers" target="_blank">
+                <img src="chargers.jpeg" alt="Chargers">
                 </a>
                 <span>Chargers</span>
             </div>
             <div class="category">
-                <a href="https://example.com/Headphones" target="_blank">
-                    <img src="headfones.jpeg" alt="Headphones">
+              <a href="https://example.com/Headphones" target="_blank">
+                <img src="headfones.jpeg" alt="Headphones">
                 </a>
                 <span>Headphones</span>
             </div>
         </div>
     </section>
-    
 
     <!-- Women Section -->
     <section>
@@ -251,29 +279,23 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 SHOP WITH US! All Rights Reserved.</p>
+        <p>&copy; 2024 SHOP WITH US ! All Rights Reserved.</p>
         <div class="social-icons">
             <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
-    <!-- Return Policy -->
+     <!-- Return Policy -->
     <div class="return-policy">
         <h2>Return Policy</h2>
-                        <p>Returns are only initiated if the product received is <strong>damaged</strong>, <strong>wrong</strong>, <strong>different colour</strong>.
-                        <p>To initiate a return, we require a proper <strong>unboxing video</strong> of the product with <strong>our bill tag</strong> on it and make sure the product is <strong>not opened before</strong>.
-                        </p> If the customer fails to provide a <strong>valid video</strong> along with our bill tag,<strong> the return request will be canceled</strong>.
-                        </p> Also keep in mind returns must be initiated within <strong>24 hours</strong> of recieving the product.
-                        <p>To initiate any return, please contact us at: <a href="mailto:prottus2004@gmail.com">prottus2004@gmail.com</a></p>
-<script>
-        // Scroll to the "Mobile Accessories" section
-        document.getElementById("explore-button").addEventListener("click", function () {
-            document.getElementById("mobile-accessories").scrollIntoView({ behavior: "smooth" });
-        });
-    </script>
+        <p>Returns are only initiated if the product received is <strong>damaged</strong>,<strong>wrong</strong>,<strong>different colour</strong>.
+        <p>To initiate a return, we require a proper <strong>unboxing video</strong> of the product with <strong>our bill tag</strong> on it and make sure the product is <strong>not opened before</strong>.
+        </p> If the customer fails to provide a <strong>valid video</strong> along with our bill tag,<strong> the return request will be canceled</strong>.
+        </p> Also keep in mind returns must be initiated within <strong>24 hours</strong> of recieving the product.
+        <p>To initiate any return, please contact us at: <a href="mailto:prottus2004@gmail.com">prottus2004@gmail.com</a></p>
+    </div>
 </body>
 </html>
