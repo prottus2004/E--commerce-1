@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarees</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product-name {
+            padding: 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+        .product-price {
+            padding: 10px;
+            font-size: 1.1rem;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Saree Collection</h1>
+    </header>
+    <main>
+        <div class="container">
+            <!-- Repeat this block for each product -->
+            <div class="product">
+                <img src="product1.jpg" alt="Saree 1">
+                <div class="product-name">Elegant Silk Saree</div>
+                <div class="product-price">$50</div>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Saree 2">
+                <div class="product-name">Designer Cotton Saree</div>
+                <div class="product-price">$45</div>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Saree 3">
+                <div class="product-name">Traditional Banarasi Saree</div>
+                <div class="product-price">$70</div>
+            </div>
+            <!-- Add more products similarly -->
+        </div>
+    </main>
+</body>
+</html>
